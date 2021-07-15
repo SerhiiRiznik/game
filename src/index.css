@@ -1,13 +1,86 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #18191a !important;
+  color: #e4e6eb !important;
+  letter-spacing: 0.5px !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.game {
+  text-align: center;
+  padding: 0 !important;
+  position: relative;
+  height: 500px;
+  background-color: #2b87d1;
+  border-radius: 0.25rem;
+}
+
+.game .started {
+  background-color: #4bdb6a;
+}
+
+.game .stoped {
+  background-color: #ce2636;
+}
+
+.game__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 100%;
+  height: inherit;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.game__wrap p {
+  font-size: 48px;
+}
+
+.game__wrap svg {
+  width: 85px;
+}
+
+.game__gag {
+  min-width: 100%;
+  height: inherit;
+  border-radius: 0.25rem;
+}
+
+.card {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  min-width: 500px !important;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #242526;
+}
+
+div.start {
+  border: 2px solid #000;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+}
+/*# sourceMappingURL=index.css.map */
