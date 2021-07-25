@@ -1,5 +1,4 @@
 import { getRandomInt } from './../selectors';
-
 import { ThunkAction } from "redux-thunk"
 import { getMinResults } from "../selectors"
 import { AppDispatch, RootState } from "./store"
@@ -21,7 +20,9 @@ const initialState = {
     results:[] as string[],
     bestResult: 0,
     showResult:false,
+    test:[] as any
   }
+  
 }
 
 export default function gameReducer(state = initialState, action:ActionType): typeof initialState {
@@ -55,6 +56,7 @@ export default function gameReducer(state = initialState, action:ActionType): ty
         results:[],
         bestResult: 0,
         showResult: false,
+        test: state.result.test
       }
     }
     case 'GAME/NEXT_STEP':
@@ -91,14 +93,31 @@ export default function gameReducer(state = initialState, action:ActionType): ty
         background: action.payload
       }
     case 'GAME/ADD_RESULT':
-      return {
-        ...state,
-        result: {
-          ...state.result,
-          currentResult: action.payload,
-          results: [
-            ...state.result.results, action.payload
-          ]
+      {
+        // const item = action.item;
+        // const changedValues = {
+        //   ...state.result.test,
+        //   [item.id]: item,
+        // };
+        return {
+          ...state,
+          result: {
+            ...state.result,
+            currentResult: action.payload,
+            results: [
+              ...state.result.results, action.payload
+            ],
+            // test: [
+            //   ...state.result.test,
+            //   {
+            //     x:action.payload , y: 12
+            //   }
+            // ]
+            test: [
+              ...state.result.test,
+                action.payload
+            ]
+          }
         }
       }
     case 'GAME/ADD_BEST_RESULT':
@@ -186,14 +205,30 @@ export const stopGame = ():ThunkType=>{
 }
 export const resetGame = ():ThunkType=>{
   return (dispatch:any, getState:any)=>{
-    const state = getState()
-    localStorage.setItem(state.gameReducer.name, state.gameReducer.result.bestResult)
     dispatch(ResetGameAC())
   }
 }
 export const setName = (arg:string):ThunkType=>{
-  return (dispatch:any, state:any)=>{
+  return (dispatch:any, getState:any)=>{
     console.log(arg);
     dispatch(setNamegAC(arg))
+  }
+}
+export const saveScore = (arg:any):ThunkType=>{
+  return (dispatch:any, getState:any)=>{
+    let state = getState()
+    debugger
+    if (state.gameReducer.name) {
+      localStorage.setItem(state.gameReducer.name, state.gameReducer.result.bestResult)
+      dispatch(showMessageAC(true))
+      dispatch(setMessageAC('Your best reaction save to localStorege'))
+    } else {
+      dispatch(showMessageAC(true))
+      dispatch(setMessageAC('Enter your Name'))
+        // console.log('set message error');
+    }
+    
+    
+    
   }
 }

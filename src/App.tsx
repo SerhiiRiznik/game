@@ -1,19 +1,27 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
 import Game from './components/Game';
 import Header from './components/Header';
-import Test from './components/BestResult';
+import BestResult from './components/BestResult';
 import Footer from './components/Footer';
-const App:React.FC=()=> {
+
+function App(props:any) {
+
   return (
     <Router>
         <Header />
-        <Switch>
-          <Route  path="/game"  component={Game} />
-          <Route path="/test" component={Test} />
-        </Switch>
+          <main className='text-light m-2'>
+            <Switch>
+              
+              <Route path="/game"  component={Game} />
+              <Route path="/bestresult" component={BestResult} />
+              <Route path="*">
+                <Redirect to={'/game'}/>
+              </Route>
+            </Switch>
+          </main>
         <Footer/>
-      </Router> 
+      </Router>
   )
 }
 

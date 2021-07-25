@@ -1,5 +1,4 @@
 import { RootState } from './reducers/store';
-import { useEffect, useRef } from 'react';
 
 export function getMinResults(state:RootState) {
   // @ts-ignore

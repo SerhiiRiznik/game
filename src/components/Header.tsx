@@ -6,9 +6,8 @@ const Header = (props: any) => {
          <nav className='navbar-dark bg-dark shadow rounded '>
             <div className='navbar-nav'>
                <ul className='nav'>
-                  <NavLink to='/test' activeClassName='active' className='p-3 nav-link'>Best Results</NavLink>
-                  <NavLink to='/game' activeClassName='active' className='p-3 nav-link'>Game</NavLink>
-                  <NavLink to='/info' activeClassName='active' className='p-3 nav-link'>Info</NavLink>
+                  <NavLink to='/bestResult' activeClassName='active' className='p-3 nav-link'>Best Results</NavLink>
+                  <NavLink to='/' activeClassName='active' className='p-3 nav-link'>Game</NavLink>
                </ul>
             </div>
          </nav>
