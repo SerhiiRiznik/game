@@ -22,9 +22,8 @@ const startGameAC = ()=>({type: 'GAME/START'})
 
 // THUNK 
 type ThunkType = ThunkAction<void, RootState, unknown, ActionType>
-let idSetTimeout: NodeJS.Timeout
 export const startGame = ():ThunkType=>{
- return ()=>{
+ return (dispatch: AppDispatch)=>{
 
  }
 }

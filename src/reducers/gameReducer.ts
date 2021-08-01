@@ -217,7 +217,6 @@ export const setName = (arg:string):ThunkType=>{
 export const saveScore = (arg:any):ThunkType=>{
   return (dispatch:any, getState:any)=>{
     let state = getState()
-    debugger
     if (state.gameReducer.name) {
       localStorage.setItem(state.gameReducer.name, state.gameReducer.result.bestResult)
       dispatch(showMessageAC(true))
@@ -225,10 +224,6 @@ export const saveScore = (arg:any):ThunkType=>{
     } else {
       dispatch(showMessageAC(true))
       dispatch(setMessageAC('Enter your Name'))
-        // console.log('set message error');
     }
-    
-    
-    
   }
 }

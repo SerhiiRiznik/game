@@ -1,7 +1,7 @@
 
 import React from 'react';
 import '../../node_modules/react-vis/dist/style.css'
-import {XYPlot, XAxis, LineSeries} from 'react-vis';
+import {FlexibleWidthXYPlot, XAxis, LineSeries} from 'react-vis';
 const data = [
       {x: 0, y: 0},
       {x: 25, y: 0},
@@ -36,31 +36,31 @@ const Statistics = (props)=> {
       }
     }
     return (
-      <>
-        <XYPlot height={350} width={500}  
-        className='col-6 flex-fill m-3 shadow rounded bg-dark'
-        style={{maxWidth: '500px',margin: '0 auto'}}
+      <div style={{height:'350px',maxWidth:'500px', width: '100%'}} className='m-2'>
+        <FlexibleWidthXYPlot height={350}
+        className='col-sm-5 flex-fill shadow rounded bg-dark'
         >
         <XAxis 
           tickFormat={v => `${v}ms` }
-          tickLabelAngle={-25}
+          tickLabelAngle={-45}
           position={'middle'}
           hideLine
           tickValues={number}
         />
-        <XAxis 
+        {/* <XAxis 
+        style={{'maxWidth':'500px'}}
         style={{
-          fontSize: 9,
+          fontSize: 12,
           stroke: 'white'
         }}
         tickFormat={v => `${v}ms` }
           top={325}
           hideLine
           tickValues={props.result.result.test}
-        />
+        /> */}
           <LineSeries data={data} curve="curveNatural" color='#62aeec'/>
-        </XYPlot>
-      </>
+        </FlexibleWidthXYPlot>
+      </div>
     );
 }
 

@@ -10,14 +10,10 @@ function App(props:any) {
   return (
     <Router>
         <Header />
-          <main className='text-light m-2'>
+          <main className='text-light'>
             <Switch>
-              
-              <Route path="/game"  component={Game} />
+              <Route exact path="/"  component={Game} />
               <Route path="/bestresult" component={BestResult} />
-              <Route path="*">
-                <Redirect to={'/game'}/>
-              </Route>
             </Switch>
           </main>
         <Footer/>

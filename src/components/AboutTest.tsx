@@ -3,10 +3,10 @@ import Statistics from "./Statistics";
 export default function AboutTest(props:any) {
    
    return (
-      // <div className=' '>
-      <div className='d-flex flex-wrap justify-content-center'>
+      
+      <section className='d-flex flex-wrap justify-content-around mt-2'>
          <Statistics result={props}/>
-         <div  className='col-sm-6 flex-fill m-4 p-3 shadow rounded bg-dark '>
+         <div  className='col-sm-5 flex-fill p-3 shadow rounded bg-dark m-2'>
             <h2>About the test</h2>
             <p>This is a simple tool to measure your reaction time.</p>
             <p>The average (median) reaction time is 273 milliseconds, according to the data collected so far.</p>
@@ -21,7 +21,6 @@ export default function AboutTest(props:any) {
             <p>Just perform at least 3 clicks and then save.
             </p>
          </div>
-         
-      </div>
+      </section>
    )
 };

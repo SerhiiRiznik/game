@@ -21,6 +21,7 @@ code {
 .container {
 }
 .game {
+  width: -webkit-fill-available;
   text-align: center;
   padding: 0 !important;
   position: relative;
@@ -35,7 +36,7 @@ code {
   .stoped {
     background-color: rgb(206, 38, 54);
   }
-  &__wrap {
+  &__wrapp {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,17 +51,11 @@ code {
       width: 85px;
     }
   }
-  &__gag {
-    min-width: 100%;
-    height: inherit;
-    border-radius: 0.25rem;
-  }
 }
 .card {
-  position: absolute !important;
   top: 50%;
   left: 50%;
-  min-width: 500px !important;
+  max-width: 500px;
   transform: translate(-50%, -50%);
   background-color: #242526;
 }
