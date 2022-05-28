@@ -1,0 +1,10 @@
+name: Deploy on git pages
+on:
+  push:
+    branches: [ master ]
+jobs:
+  job_one:
+    steps:
+      - name: Run build
+          run: |
+            npm deploy
