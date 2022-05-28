@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/SerhiiRiznik/game.git/static/css/main.55def6c8.chunk.css",
+    "main.js": "/SerhiiRiznik/game.git/static/js/main.9be4abea.chunk.js",
+    "main.js.map": "/SerhiiRiznik/game.git/static/js/main.9be4abea.chunk.js.map",
+    "runtime-main.js": "/SerhiiRiznik/game.git/static/js/runtime-main.e0896833.js",
+    "runtime-main.js.map": "/SerhiiRiznik/game.git/static/js/runtime-main.e0896833.js.map",
+    "static/css/2.3c620d44.chunk.css": "/SerhiiRiznik/game.git/static/css/2.3c620d44.chunk.css",
+    "static/js/2.f7a870ae.chunk.js": "/SerhiiRiznik/game.git/static/js/2.f7a870ae.chunk.js",
+    "static/js/2.f7a870ae.chunk.js.map": "/SerhiiRiznik/game.git/static/js/2.f7a870ae.chunk.js.map",
+    "static/js/3.12536077.chunk.js": "/SerhiiRiznik/game.git/static/js/3.12536077.chunk.js",
+    "static/js/3.12536077.chunk.js.map": "/SerhiiRiznik/game.git/static/js/3.12536077.chunk.js.map",
+    "index.html": "/SerhiiRiznik/game.git/index.html",
+    "static/css/2.3c620d44.chunk.css.map": "/SerhiiRiznik/game.git/static/css/2.3c620d44.chunk.css.map",
+    "static/css/main.55def6c8.chunk.css.map": "/SerhiiRiznik/game.git/static/css/main.55def6c8.chunk.css.map",
+    "static/js/2.f7a870ae.chunk.js.LICENSE.txt": "/SerhiiRiznik/game.git/static/js/2.f7a870ae.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0896833.js",
+    "static/css/2.3c620d44.chunk.css",
+    "static/js/2.f7a870ae.chunk.js",
+    "static/css/main.55def6c8.chunk.css",
+    "static/js/main.9be4abea.chunk.js"
+  ]
+}
